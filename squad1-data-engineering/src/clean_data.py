@@ -1,3 +1,5 @@
+
+
 import pandas as pd
 import os
 
@@ -18,9 +20,9 @@ def clean_data(ticker="AAPL"):
     print(f"Cleaning data for {ticker}...")
     
     # load raw data
-    # explicitly parse the 'Date' column if it exists, otherwise we'll handle it below
     try:
-        df = pd.read_csv(raw_path)
+        # yfinance CSVs usually have the date as the first column (index)
+        df = pd.read_csv(raw_path, index_col=0, parse_dates=True)
     except FileNotFoundError:
         print(f"Error: File not found at {raw_path}")
         return
@@ -28,14 +30,16 @@ def clean_data(ticker="AAPL"):
     # standardize column names to lowercase
     df.columns = [col.lower() for col in df.columns]
     
-    # ensure date column is datetime
-    # yfinance usually puts Date in the index or as a column named 'Date' (now 'date')
-    if 'date' in df.columns:
-        df['date'] = pd.to_datetime(df['date'])
-        df.set_index('date', inplace=True)
-    elif df.index.name == 'Date':
-         df.index.name = 'date'
-         df.index = pd.to_datetime(df.index)
+    # Ensure index is named 'date'
+    df.index.name = 'date'
+    
+    # If date was somehow read as a column (fallback), handled by set_index? 
+    # With index_col=0, it's in the index.
+
+    # drop missing values
+
+    # Ensure all columns are numeric
+    df = df.apply(pd.to_numeric, errors='coerce')
 
     # drop missing values
     df.dropna(inplace=True)
