@@ -3,4 +3,6 @@ pandas
 numpy
 pyarrow
 ta
+fastapi
+uvicorn
 
