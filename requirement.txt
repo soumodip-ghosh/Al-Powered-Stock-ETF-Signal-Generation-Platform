@@ -1,0 +1,12 @@
+yfinance
+pandas
+numpy
+pyarrow
+ta
+scikit-learn
+tensorflow
+fastapi
+uvicorn
+joblib
+requests
+
