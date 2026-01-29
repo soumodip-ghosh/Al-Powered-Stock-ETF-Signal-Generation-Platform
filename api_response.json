@@ -1,0 +1,35 @@
+{
+  "action": "SELL",
+  "signal_value": -1,
+  "timestamp": "2026-01-26T20:53:39.972852",
+  "prediction_date": "2026-01-26 20:53:39",
+  "reasoning": "",
+  "confidence": 87.5,
+  "confidence_level": "Very High",
+  "key_factors": [
+    "RSI is neutral",
+    "MACD line is below the signal line",
+    "Price is below the 50-day SMA",
+    "MACD histogram shows increasing bearish momentum."
+  ],
+  "feature_importance": {
+    "RSI (Neutral)": 18.695875368496242,
+    "MACD (Bearish)": 37.391750736992485,
+    "Trend (Downtrend)": 37.391750736992485,
+    "Volume": 6.520623157518781
+  },
+  "market_mood": "Market conditions appear neutral.",
+  "top_news": [
+    "Jim Cramer Reveals Why Apple (AAPL) Stock is Struggling - Yahoo Finance",
+    "Where Will Apple Stock Be in 1 Year? - The Motley Fool",
+    "Why Apple\u2019s Sell-Off May Be Overdone Right Before Earnings - MarketBeat",
+    "Apple: Q1 Results Could Trigger A Price Reversal, But Buy Regardless (NASDAQ:AAPL) - Seeking Alpha",
+    "Morgan Stanley Reaffirms a \u2018Buy\u2019 on Apple Stock Ahead of Q1, but With a Warning - TipRanks"
+  ],
+  "prediction_frequency": "Real-time (on-demand)",
+  "model_type": "Ensemble ML (Random Forest + XGBoost)",
+  "model_version": "v3.0.0",
+  "last_trained": "2025-01-08",
+  "signal": "SELL",
+  "expected_return": 0.0
+}
