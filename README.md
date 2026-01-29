@@ -512,7 +512,6 @@ Contributions are welcome! Please follow these steps:
 ## Roadmap
 
 - [ ] Machine learning model improvements
-- [ ] Mobile app integration
 - [ ] Advanced portfolio optimization
 - [ ] Risk management algorithms
 - [ ] Real-time sentiment analysis
